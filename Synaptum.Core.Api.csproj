@@ -7,7 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Synaptum.Core.Api\Synaptum.Core.Api.csproj" />
+    <ProjectReference Include="..\Synaptum.Core.Application\Synaptum.Core.Application.csproj" />
+    <ProjectReference Include="..\Synaptum.Core.Domain\Synaptum.Core.Domain.csproj" />
+    <ProjectReference Include="..\Synaptum.Core.Infrastructure\Synaptum.Core.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+    <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.0"/>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.0.1" />
   </ItemGroup>
 
 </Project>

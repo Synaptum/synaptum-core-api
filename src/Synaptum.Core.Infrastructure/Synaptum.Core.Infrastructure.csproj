@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Synaptum.Core.Application\Synaptum.Core.Application.csproj" />
+    <ProjectReference Include="..\Synaptum.Core.Domain\Synaptum.Core.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

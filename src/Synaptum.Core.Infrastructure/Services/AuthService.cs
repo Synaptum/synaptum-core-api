@@ -52,7 +52,8 @@ namespace Synaptum.Core.Infrastructure.Services
         private string GenerateJwt(User user)
         {
             var key = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(_config["Jwt:Key"])
+
+                Encoding.UTF8.GetBytes(_config["Jwt:Key"] ?? throw new Exception("JWT Key missing"))
             );
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
